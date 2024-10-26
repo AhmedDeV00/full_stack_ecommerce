@@ -7,7 +7,7 @@ import Item from '../item/Item';
 function NewCollection() {
 
     const fetchProduct = async () => {
-        const res = await axios.get("http://localhost:3003/newcollections", { withCredentials: true, });
+        const res = await axios.get("https://full-stack-e-commerce-website-are8.onrender.com/newcollections", { withCredentials: true, });
         return res.data;
     };
     const { data: new_collections } = useQuery({
@@ -21,7 +21,7 @@ function NewCollection() {
             <div className="collections">
                 {new_collections && new_collections.length > 0 ? (
                     new_collections.map((item) => (
-                        <Item key={item._id} id={item._id} name={item.name} image={`http://localhost:3003/${item.image}`} new_price={item.new_price} old_price={item.old_price} />
+                        <Item key={item._id} id={item._id} name={item.name} image={`https://full-stack-e-commerce-website-are8.onrender.com/${item.image}`} new_price={item.new_price} old_price={item.old_price} />
                     ))
                 ) : (
                     <p>No New Collections available.</p>
