@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 // Enable CORS for all routes
 app.use(cors({
-    origin: ['http://localhost:3001', 'http://localhost:5173'],  // Allow requests from this origin
+    origin: ['full-stack-ecommerce-beta.vercel.app', 'http://localhost:5173'],  // Allow requests from this origin
     credentials: true,
 }));
 app.use(cookieParser())
