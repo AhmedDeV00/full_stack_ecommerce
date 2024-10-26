@@ -18,7 +18,7 @@ const ShopContextProvider = ({ children }) => {
 
     // Fetching products using React Query
     const fetchInfo = async () => {
-        const res = await axios.get("https://full-stack-e-commerce-website-are8.onrender.com/allproducts", {
+        const res = await axios.get("https://full-stack-ecommerce-or2v.onrender.com/allproducts", {
             withCredentials: true,
         });
         return res.data.products; // Returning the products array
@@ -41,7 +41,7 @@ const ShopContextProvider = ({ children }) => {
             return newCartItems;
         });
         try {
-            const res = await axios.post("https://full-stack-e-commerce-website-are8.onrender.com/addtocart", { itemId: productId }, {
+            const res = await axios.post("https://full-stack-ecommerce-or2v.onrender.com/addtocart", { itemId: productId }, {
                 withCredentials: true,
             })
             console.log(res.data);
@@ -53,7 +53,7 @@ const ShopContextProvider = ({ children }) => {
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         try {
-            const res = await axios.delete("https://full-stack-e-commerce-website-are8.onrender.com/removefromcart", {
+            const res = await axios.delete("https://full-stack-ecommerce-or2v.onrender.com/removefromcart", {
                 data: { itemId },
                 withCredentials: true,  // Include cookies (token)
             });
@@ -65,7 +65,7 @@ const ShopContextProvider = ({ children }) => {
     };
 
     const fetchCart = async () => {
-        const res = await axios.get("https://full-stack-e-commerce-website-are8.onrender.com/getCart", {
+        const res = await axios.get("https://full-stack-ecommerce-or2v.onrender.com/getCart", {
             withCredentials: true,  // Send cookies for authentication
         });
         setCartItems(res.data)
