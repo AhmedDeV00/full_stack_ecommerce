@@ -35,7 +35,7 @@ function LoginSignup() {
 	const signup = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post("https://full-stack-e-commerce-website-are8.onrender.com/register", formData, {
+			const res = await axios.post("https://full-stack-ecommerce-or2v.onrender.com/register", formData, {
 				withCredentials: true
 			});
 			console.log("Signup jwo bhy", res);
