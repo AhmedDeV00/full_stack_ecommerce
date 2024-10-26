@@ -12,7 +12,6 @@ function LoginSignup() {
 		password: ""
 	});
 
-
 	const handleChange = (e) => {
 		setFormData({
 			...formData,
