@@ -30,6 +30,28 @@ Node.js: Back-end runtime environment for executing server-side logic.
 
 Redux: State management for handling application state.
 
-git clone https://github.com/AhmedDeV00/Full-Stack-E-commerce-Website.git
-
 JWT (JSON Web Tokens): Secure user authentication and authorization. Multer: Middleware for handling image uploads for products. Axios & React Query: For handling HTTP requests and managing data fetching.
+
+Installation
+
+git clone https://github.com/AhmedDeV00/Full-Stack-E-commerce-Website.git
+Open 2 terminals in separate windows/tabs.
+
+Terminal 1: Setting Up Backend
+
+cd backend
+npm install
+npm start
+
+Create a file called .env in the backend folder. Inside it write this :
+
+MONGO_URL = mongodb://127.0.0.1/ecommerce
+
+SECRET_KEY = 'secretkey'
+Instead of this link write your database link.
+
+Terminal 2: Setting Up Frontend
+
+cd frontend
+npm install
+npm start
